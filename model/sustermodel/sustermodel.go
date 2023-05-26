@@ -58,17 +58,6 @@ func ModelDeleteSuster(id int) bool {
 	return false
 }
 
-func ModelViewByIdSuster(id int) *entity.Suster {
-	temp := &DB.DBSuster
-	for temp != nil {
-		if temp.Data.Id == id {
-			return &temp.Data
-		}
-		temp = temp.Next
-	}
-	return nil
-}
-
 func ModelViewAllSuster() []entity.Suster {
 	temp := DB.DBSuster.Next
 	members := []entity.Suster{}

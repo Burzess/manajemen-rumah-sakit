@@ -58,17 +58,6 @@ func ModelDeleteDokter(id int) bool {
 	return false
 }
 
-func ModelViewByIdDokter(id int) *entity.Dokter {
-	temp := &DB.DBDokter
-	for temp != nil {
-		if temp.Data.Id == id {
-			return &temp.Data
-		}
-		temp = temp.Next
-	}
-	return nil
-}
-
 func ModelViewAllDokter() []entity.Dokter {
 	temp := DB.DBDokter.Next
 	members := []entity.Dokter{}

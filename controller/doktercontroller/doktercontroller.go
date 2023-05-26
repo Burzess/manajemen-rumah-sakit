@@ -48,8 +48,8 @@ func ControllerDelete(id int) error {
 	return errors.New("delete gagal id tidak ditemukan")
 }
 
-func ControllerViewById(id int) *entities.Dokter {
-	current := model.ModelViewByIdDokter(id)
+func ControllerViewById(id int) *entities.LinkedlistDokter {
+	current := model.Search(id)
 	if current == nil {
 		return nil
 	}

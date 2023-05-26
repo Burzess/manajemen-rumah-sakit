@@ -66,8 +66,8 @@ func ViewById() {
 	fmt.Scan(&id)
 	current := controller.ControllerViewById(id)
 	if current != nil {
-		fmt.Println(current.Id)
-		fmt.Println(current.Nama)
+		fmt.Println(current.Next.Data.Id)
+		fmt.Println(current.Next.Data.Nama)
 	} else {
 		fmt.Println("data tidak di temukan")
 	}
